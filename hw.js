@@ -17,34 +17,39 @@ var Client = class {
   constructor(name, hair) {
     this.name = name
     this.hair = hair
+    this.reservations = []
+    
   }
   
   reserve(appointment) {
-    this.appointment = appointment
-    appointment.reservations = this.appointment
+    this.reservations.push(appointment)
+    appointment.available = false
   }
 } 
 
-var anna = new Client('Anna', 'short')
+var anna = new Client('Anna', 'short') 
 
 
 var HairSalon = class {
-  constructor(name) {
-    this.name = name
+  constructor(salonName) {
+    this.name = salonName
+    this.appointments = []
   }
   
    offer(appointment) {
-    this.appointment = appointment
-    appointment.available = this.appointment
-  }
+    this.appointments.push(appointment)
+    appointment.available = true 
+   }
 }  
   
 var HappyHair = new HairSalon("Happy Hair")
 
 var Appointment = class {
-  constructor(date, time) {
+  constructor(date, time, available) {
     this.date = date
     this.time = time
+    this.available = false
+    this.reservedBy = ""
     }
 }
 
