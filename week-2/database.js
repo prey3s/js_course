@@ -1,3 +1,11 @@
 const fs = require('fs')
 module.exports = {
-  fs.writerFile
+  save(data) {
+    fs.writeFileSync('data.json', JSON.stringify(data))
+  },
+  load() {
+    return JSON.parse(fs.readFileSync('data.json'))
+  }
+}
+  
+
