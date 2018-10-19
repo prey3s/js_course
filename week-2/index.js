@@ -29,14 +29,6 @@ var HairSalon = class {
   
 var HappyHair = new HairSalon("Happy Hair")
 
-var Appointment = class {
-  constructor(date, time, available) {
-    this.date = date
-    this.time = time
-    this.available = false
-    this.reservedBy = ""
-    }
-}
 
 var May1_noon = new Appointment ("May 1", "noon")  
 
