@@ -10,26 +10,13 @@ Interactions:
   Client can reserve appointment
   
 */
-
+const Client = require('./client')
+const HairSalon = require('./hairsalon')
+const Appointment = require('./appointment')
+const Database = require('./database')
 
 var anna = new Client('Anna', 'short') 
-
-
-var HairSalon = class {
-  constructor(salonName) {
-    this.name = salonName
-    this.appointments = []
-  }
-  
-   offer(appointment) {
-    this.appointments.push(appointment)
-    appointment.available = true 
-   }
-}  
-  
 var HappyHair = new HairSalon("Happy Hair")
-
-
 var May1_noon = new Appointment ("May 1", "noon")  
 
 
