@@ -3,6 +3,7 @@ module.exports = class Appointment {
     this.date = date
     this.time = time
     this.available = false
-    this.reservedBy = ""
+    this.bookedBy = ""
+    this.stylist = ""
     }
 }
