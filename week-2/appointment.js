@@ -6,8 +6,4 @@ module.exports = class Appointment {
     this.bookedBy = ""
     this.stylist = ""
     }
-
-    static create({date, time, available}) {
-      return new Appointment(date, time, avaialable)
-    }
 }
