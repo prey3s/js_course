@@ -24,6 +24,7 @@ const HappyHair = new HairSalon("Happy Hair")
 const May1_noon = new Appointment ("May 1", "noon")  
 const Lula = new HairStylist ("Lula", 'color')
 const May3_2_00 = new Appointment ("May 3", "2:00") 
+const May3_1_00 = new Appointment ("May 3", "2:00") 
 
 HappyHair.offer(May1_noon)
 HappyHair.offer(May3_2_00)
@@ -35,8 +36,6 @@ Lula.works(May1_noon)
 //Database.save(Anna)
 Database.save(HappyHair)
 
-const HappyHairAppts = Database.load()
+const happyHairDatabase = Database.load()
 
-const LulaNew = HappyHairAppts.appointments[0].stylist
-
-LulaNew.works(May3_2_00)
+happyHairDatabase.offers(May3_1_00)
