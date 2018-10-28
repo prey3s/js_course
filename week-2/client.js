@@ -1,4 +1,4 @@
-const HairSalon = require('./hairsalon')
+const Appointment = require('./appointment')
 
 module.exports = class Client {
   constructor(name, hair) {
@@ -14,10 +14,10 @@ module.exports = class Client {
     appointment.bookedBy = this.name
   }
 
-  static create({name, hair}) {
-    const client = new Client(name)
+  static create({name, hair, reservations}) {
+    const client = new Client(name, hair)
     
-    client.reservations = reservations.map(HairSalon.create)
+    client.reservations = reservations.map(Appointment.create)
 
     return client
   }
