@@ -1,8 +1,8 @@
-const Client = require('./client')
+const Appointment = require('./appointment')
 
 module.exports = class HairSalon {
   constructor(salonName) {
-    this.name = salonName
+    this.name = salonName 
     this.appointments = []
   }
   
@@ -14,7 +14,7 @@ module.exports = class HairSalon {
    static create({name, appointments}) {
      const hairSalon = new HairSalon(name)
      
-     hairSalon.appointments = appointments.map(Client.create)
+     hairSalon.appointments = appointments.map(Appointment.create)
 
      return hairSalon
    }
