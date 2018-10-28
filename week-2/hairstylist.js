@@ -13,7 +13,7 @@ module.exports = class HairStylist {
       appointment.stylist = this.name
     }
 
-    static create({name, speciality}) {
+    static create({name, speciality, bookings}) {
       const stylist = new HairStylist(name)
       
       stylist.bookings = bookings.map(Appointment.create)
