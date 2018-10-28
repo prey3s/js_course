@@ -1,3 +1,5 @@
+const HairSalon = require('./hairsalon')
+
 module.exports = class Client {
   constructor(name, hair) {
     this.name = name
@@ -11,4 +13,13 @@ module.exports = class Client {
     appointment.available = false
     appointment.bookedBy = this.name
   }
+
+  static create({name, hair}) {
+    const client = new Client(name)
+    
+    client.reservations = reservations.map(HairSalon.create)
+
+    return client
+  }
+
 } 
