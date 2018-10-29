@@ -41,13 +41,13 @@ console.log(happyHairDatabase.appointments[0])
 //Part II: async / await //
 
 const main = async () => {
-  const contents1 = await fs.readFile(_dirname + '/files/1.txt')
+  const contents1 = await readFile(_dirname + '/files/1.txt')
   console.log(contents1)
 
-  const contents2 = await fs.readFile(_dirname + '/files/2.txt')
+  const contents2 = await readFile(_dirname + '/files/2.txt')
   console.log(contents2)
 
-  const contents3 = await fs.readFile(_dirname + '/files/3.txt')
+  const contents3 = await readFile(_dirname + '/files/3.txt')
   console.log(contents3)
 }
 
